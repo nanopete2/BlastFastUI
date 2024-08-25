@@ -7,9 +7,9 @@ from fastui.events import GoToEvent
 
 def demo_page(*components: AnyComponent, title: str | None = None) -> list[AnyComponent]:
     return [
-        c.PageTitle(text=f'FastUI Demo — {title}' if title else 'FastUI Demo'),
+        c.PageTitle(text=f'Blast search — {title}' if title else 'FastUI Demo'),
         c.Navbar(
-            title='FastUI Demo',
+            title='Plant Ecophysiology Research Group',
             title_event=GoToEvent(url='/'),
             start_links=[
                 c.Link(
