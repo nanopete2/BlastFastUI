@@ -8,7 +8,7 @@ from .shared import demo_page
 
 router = APIRouter()
 
-
+#
 @router.get('/', response_model=FastUI, response_model_exclude_none=True)
 def api_index() -> list[AnyComponent]:
     # language=markdown

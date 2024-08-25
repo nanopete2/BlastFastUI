@@ -7,13 +7,18 @@ from fastui.events import GoToEvent
 
 def demo_page(*components: AnyComponent, title: str | None = None) -> list[AnyComponent]:
     return [
-        c.PageTitle(text=f'Blast search — {title}' if title else 'FastUI Demo'),
+        c.PageTitle(text=f'Blast search — {title}' if title else 'Plant Ecophysiology Research Group'),
         c.Navbar(
-            title='Plant Ecophysiology Research Group',
+            title='Blast search by Plant Ecophysiology Research Group',
             title_event=GoToEvent(url='/'),
             start_links=[
                 c.Link(
-                    components=[c.Text(text='Components')],
+                    components=[c.Text(text='Blast seach gene 1')],
+                    on_click=GoToEvent(url='/components'),
+                    active='startswith:/components',
+                ),
+                c.Link(
+                    components=[c.Text(text='Blast seach gene 2')],
                     on_click=GoToEvent(url='/components'),
                     active='startswith:/components',
                 ),
